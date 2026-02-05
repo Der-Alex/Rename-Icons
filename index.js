@@ -21,8 +21,6 @@ const toCamelCaseFromSeparators = (baseName) => {
     .split(/[\s-]+/g)
     .filter(Boolean);
 
-  if (parts.length <= 1) return baseName;
-
   return parts.reduce(
     (acc, part) => acc + part[0].toUpperCase() + part.slice(1) + "Icon",
     "",
